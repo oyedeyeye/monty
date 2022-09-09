@@ -108,4 +108,16 @@ void divop(stack_t **stack, unsigned int nline);
 void mulop(stack_t **stack, unsigned int nline);
 void modop(stack_t **stack, unsigned int nline);
 
+/* Utility functions */
+void(*get_op_func(line_t line, meta_t *meta))(stack_t **, unsigned int);
+int _isalpha(int c);
+
+/* Parser Functions */
+void parsefile(FILE *file);
+void parseline(line_t *line, char *buffer);
+
+/* Verification functions */
+bool comment_check(line_t line);
+void push_check(line_t line, meta_t *meta, char *opcode);
+
 #endif /* MONTY_H */
