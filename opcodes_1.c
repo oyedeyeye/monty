@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * push - pushes a node to top of stack
- * @stack: pointer to head node pointer of stack
- * @nline: line number
+ * push - pushes a node to the top of stack
+ * @stack: pointer to the head node pointer of stack
+ * @nline: the line number
  *
- * Return: NOthing
+ * Return: Nothing.
  */
 void push(stack_t **stack, unsigned int nline)
 {
@@ -27,18 +27,18 @@ void push(stack_t **stack, unsigned int nline)
 
 	new->next = *stack;
 	new->prev = NULL;
-	new->n = arg.arg;
+	new->n = arg;
 	if (*stack)
 		(*stack)->prev = new;
 	*stack = new;
 }
 
 /**
- * pall - prints data of all node in stack
- * @stack: pointer to head node pointer
+ * pall - prints the data of all nodes in stack
+ * @stack: pointer to the head node pointer of stack
  * @nline: the line number
  *
- * Return: Nothing
+ * Return: Nothing.
  */
 void pall(stack_t **stack, unsigned int nline)
 {
@@ -75,7 +75,7 @@ void free_stack(stack_t **stack)
 }
 
 /**
- * nop - has no function in life
+ * nop - does literally nothing
  * @stack: pointer to the head node pointer of stack
  * @nline: the line number
  * Return: Nothing.
@@ -98,3 +98,4 @@ int _isalpha(int c)
 	else
 		return (0);
 }
+
