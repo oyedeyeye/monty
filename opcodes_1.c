@@ -27,7 +27,7 @@ void push(stack_t **stack, unsigned int nline)
 
 	new->next = *stack;
 	new->prev = NULL;
-	new->n = arg;
+	new->n = arg.arg;
 	if (*stack)
 		(*stack)->prev = new;
 	*stack = new;
