@@ -1,4 +1,6 @@
+#define _GNU_SOURCE
 #include "monty.h"
+
 
 /**
  * parseline - tokenizes a line of text, storing it in line struct
